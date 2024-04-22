@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>VitalGuard </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="admin_dash" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">VitalGuard</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <div class="search-bar">
+    </div>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Admin</h6>
+              <span>Vital Guard</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Log Out</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link " href="admin_dash">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="patient_add.html">
+          <i class="bi bi-people"></i>
+          <span>Add Patient</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="manage_doctor.html">
+          <i class="bi bi-person"></i>
+          <span>Manage Doctor</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Logout</span>
+        </a>
+      </li>   
+    </ul>
+  </aside>
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="admin_dash">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div>
+    <section class="section dashboard">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Patient <span>| Hospital</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>2</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+                <div class="card-body">
+                  <h5 class="card-title">Patient <span>| Home</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-house"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-4 col-xl-12">
+              <div class="card info-card customers-card">
+                <div class="card-body">
+                  <h5 class="card-title">Critical <span>| Patient</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>0</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Reports</h5>
+                  <div id="reportsChart"></div>
+                    <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                new ApexCharts(document.querySelector("#reportsChart"), {
+                  series: [
+                    {
+                      data: [3, 6, 4, 1, 5, 8, 3],
+                    },
+                  ],
+                  chart: {
+                    height: 350,
+                    type: 'area',
+                    toolbar: {
+                      show: false,
+                    },
+                  },
+                  markers: {
+                    size: 4,
+                  },
+                  colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                  fill: {
+                    type: 'gradient',
+                    gradient: {
+                      shadeIntensity: 1,
+                      opacityFrom: 0.3,
+                      opacityTo: 0.4,
+                      stops: [0, 90, 100],
+                    },
+                  },
+                  dataLabels: {
+                    enabled: false,
+                  },
+                  stroke: {
+                    curve: 'smooth',
+                    width: 2,
+                  },
+                  xaxis: {
+                    type: 'date',
+                    categories: [
+                      '2023-09-19',
+                      '2023-09-20',
+                      '2023-09-21',
+                      '2023-09-22',
+                      '2023-09-23',
+                      '2023-09-24',
+                      '2023-09-25',
+                      '2023-09-26',
+                    ],
+                  },
+                  yaxis: {
+                    labels: {
+                      formatter: function (value) {
+                        if (value === 1) {
+                          return 'Low';
+                        } else if (value === 4) {
+                          return 'Medium';
+                        } else if (value === 8) {
+                          return 'Critical';
+                        } else {
+                          return '';
+                        }
+                      },
+                    },
+                    min: 0,
+                    max: 10,
+                  },
+                  tooltip: {
+                    x: {
+                      format: 'dd/MM/yy',
+                    },
+                  },
+                }).render();
+              });
+            </script>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card patient-health-info overflow-auto">
+                  <div class="card-body">
+                      <h5 class="card-title">Patient Health Information</h5>
+                      <table class="table table-bordered datatable">
+                          <thead>
+                              <tr>
+                                  <th scope="col">Patient ID</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">BPM</th>
+                                  <th scope="col">SpO2</th>
+                                  <th scope="col">Status</th>
+                                  <th scope="col">Action</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>1</td>
+                                  <td>Adarsh Rai</td>
+                                  <td>86</td>
+                                  <td>94%</td>
+                                  <td><span class="badge bg-success">Average</span></td>
+                                  <td><a href="doc_2.html" target="_blank" class="btn btn-primary btn-sm">View Health</a></td>
+                              </tr>
+                              <tr>
+                                  <td>2</td>
+                                  <td>Sania Mane</td>
+                                  <td>78</td>
+                                  <td>96%</td>
+                                  <td><span class="badge bg-warning">Average</span></td>
+                                  <td><a href="doc_2.html" target="_blank" class="btn btn-primary btn-sm">View Health</a></td>
+                              </tr>
+                              <tr>
+                                  <td>3</td>
+                                  <td>Jeet Patel</td>
+                                  <td>72</td>
+                                  <td>98%</td>
+                                  <td><span class="badge bg-danger">Average</span></td>
+                                  <td><a href="doc_2.html" target="_blank" class="btn btn-primary btn-sm">View Health</a></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card top-selling overflow-auto">
+                <div class="filter">
+                </div>
+                <div class="card-body pb-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="card">
+            <div class="card-body pb-0">
+                <h5 class="card-title">Alert <span>| Device</span></h5>
+                <div class="alert alert-warning mb-4">
+                  <p><strong>Patient:</strong> Shivam</p>
+                  <p><strong>Time:</strong> 10:20 am 2023-09-19</p>
+                </div>
+                <div class="alert alert-danger mb-4">
+                  <p>Patient: Satyam</p>
+                  <p>Time: 09:00 am 2023-09-20</p>
+              </div>  
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>VitalGuard</span></strong>. All Rights Reserved
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

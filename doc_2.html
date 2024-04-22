@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>VitalGuard </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">VitalGuard</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <div class="search-bar">
+    </div>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li>
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Dr.Akash Patil</h6>
+              <span>Doctor</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Log Out</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link " href="relativedash.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="relativedash.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div>
+    <section class="section dashboard">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">BPM Graph</h5>
+                    <div id="bpmChart"></div>
+                    <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                        new ApexCharts(document.querySelector("#bpmChart"), {
+                          series: [{
+                            data: [70, 72, 75, 78, 80, 82, 84, 88, 90, 92, 95, 100, 105, 110, 112, 115],
+                          }],
+                          chart: {
+                            height: 200,
+                            width: 300,
+                            type: 'line',
+                            toolbar: {
+                              show: false
+                            },
+                          },
+                          markers: {
+                            size: 4
+                          },
+                          colors: ['#FF5733'],
+                          fill: {
+                            type: "gradient",
+                            gradient: {
+                              shadeIntensity: 1,
+                              opacityFrom: 0.3,
+                              opacityTo: 0.4,
+                              stops: [0, 90, 100]
+                            }
+                          },
+                          dataLabels: {
+                            enabled: false
+                          },
+                          stroke: {
+                            curve: 'smooth',
+                            width: 2
+                          },
+                          xaxis: {
+                            categories: ["0s", "10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s", "100s", "110s", "120s", "130s", "140s"],
+                          },
+                          yaxis: {
+                            min: 50,
+                            max: 150,
+                            title: {
+                              text: 'BPM'
+                            }
+                          },
+                          tooltip: {
+                            x: {
+                              show: false
+                            },
+                          }
+                        }).render();
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">SpO2 Graph</h5>
+                    <div id="spo2Chart"></div>
+                    <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                        new ApexCharts(document.querySelector("#spo2Chart"), {
+                          series: [{
+                            data: [95, 96, 97, 97, 96, 95, 94, 93, 92, 91, 90, 91, 92, 93, 94, 95],
+                          }],
+                          chart: {
+                            height: 200,
+                            width: 300,
+                            type: 'line',
+                            toolbar: {
+                              show: false
+                            },
+                          },
+                          markers: {
+                            size: 4
+                          },
+                          colors: ['#2eca6a'],
+                          fill: {
+                            type: "gradient",
+                            gradient: {
+                              shadeIntensity: 1,
+                              opacityFrom: 0.3,
+                              opacityTo: 0.4,
+                              stops: [0, 90, 100]
+                            }
+                          },
+                          dataLabels: {
+                            enabled: false
+                          },
+                          stroke: {
+                            curve: 'smooth',
+                            width: 2
+                          },
+                          xaxis: {
+                            categories: ["0s", "10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s", "100s", "110s", "120s", "130s", "140s"],
+                          },
+                          yaxis: {
+                            min: 50,
+                            max: 100,
+                            title: {
+                              text: 'SpO2 (%)'
+                            }
+                          },
+                          tooltip: {
+                            x: {
+                              show: false
+                            },
+                          }
+                        }).render();
+                      });
+                    </script>
+                  </div>
+                </div>
+              </div>
+              <div id="ecgChart" style="background-color: #ffffff;"></div>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  new ApexCharts(document.querySelector("#ecgChart"), {
+                    series: [{
+                      data: [0.1, 0.2, 0.3, 0.4, 0.5, 0.4, 0.3, 0.2, 0.1, 0.0, -0.1, -0.2, -0.3, -0.4, -0.5, -0.4, -0.3, -0.2, -0.1, 0.0],
+                    }],
+                    chart: {
+                      height: 200,
+                      width: 700, 
+                      type: 'line',
+                      toolbar: {
+                        show: false
+                      },
+                    },
+                    markers: {
+                      size: 4
+                    },
+                    colors: ['#3498db'],
+                    dataLabels: {
+                      enabled: false
+                    },
+                    stroke: {
+                      curve: 'smooth',
+                      width: 2
+                    },
+                    xaxis: {
+                      categories: ["0s", "10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s", "100s", "110s", "120s", "130s", "140s", "150s", "160s", "170s", "180s", "190s"],
+                    },
+                    yaxis: {
+                      title: {
+                        text: 'ECG Amplitude'
+                      }
+                    },
+                    tooltip: {
+                      x: {
+                        show: false
+                      },
+                    }
+                  }).render();
+                });
+              </script>
+            </div>
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">Logs </h5>
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Time/Min</th>
+                        <th scope="col">BPM</th>
+                        <th scope="col">Sp02</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">2 Min</a></th>
+                        <td><a href="#" class="text-primary">86</a></td>
+                        <td>94%</td>
+                        <td><span class="badge bg-success">Average</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">4 Min</a></th>
+                        <td><a href="#" class="text-primary">78</a></td>
+                        <td>96%</td>
+                        <td><span class="badge bg-warning">Average</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">6 Min</a></th>
+                        <td><a href="#" class="text-primar">72</a></td>
+                        <td>98%</td>
+                        <td><span class="badge bg-danger">Average</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">8 Min</a></th>
+                        <td><a href="#" class="text-primary">86</a></td>
+                        <td>94%</td>
+                        <td><span class="badge bg-success">Average</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">10 Min</a></th>
+                        <td><a href="#" class="text-primary">85</a></td>
+                        <td>96%</td>
+                        <td><span class="badge bg-danger">Average</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card top-selling overflow-auto">
+                <div class="filter">
+                </div>
+                <div class="card-body pb-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="card">
+            <div class="card-body pb-0">
+              <h5 class="card-title">Alert <span>| Device</span></h5>
+              <div class="alert alert-warning mb-4">
+                <p><strong>Patient:</strong> Shivam</p>
+                <p><strong>Time:</strong> 10:20 am 2023-09-19</p>
+              </div>
+              <div class="alert alert-danger mb-4">
+                <p>Patient: Satyam</p>
+                <p>Time: 09:00 am 2023-09-20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>VitalGuard</span></strong>. All Rights Reserved
+    </div>
+  </footer>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

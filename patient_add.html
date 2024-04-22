@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>VitalGuard </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: VitalGuard
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="admin_dash.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">VitalGuard</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+
+
+
+        <li class="nav-item dropdown">
+
+
+          </a><!-- End Messages Icon -->
+
+
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Admin</h6>
+              <span>Administrator</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Log Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="admin_dash.html">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="patient_add.html">
+          <i class="bi bi-people"></i>
+          <span>Add Patient</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="manage-doctor.html">
+          <i class="bi bi-person"></i>
+          <span>Manage Doctor</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-login.html">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span>Logout</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</a></li>
+          <li class="breadcrumb-item">Dashboard</a></li>
+          <li class="breadcrumb-item">Admin</a></li>
+          <li class="breadcrumb-item active">Add Patient</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+
+
+
+    <!-- End Reports -->
+
+
+    <!-- Add Patient Form -->
+    <div class="col-12">
+  <div class="card add-patient-form">
+    <div class="card-body">
+      <h5 class="card-title">Add Patient</h5>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="patientName" class="form-label">Patient Name</label>
+            <input type="text" class="form-control" id="patientName" name="patientName" required>
+          </div>
+          <div class="col-md-6">
+            <label for="patientAge" class="form-label">Patient Age</label>
+            <input type="number" class="form-control" id="patientAge" name="patientAge" required>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="patientBed" class="form-label">Bed Number</label>
+            <input type="text" class="form-control" id="patientBed" name="relativeName">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="disease" class="form-label">Disease</label>
+            <input type="text" class="form-control" id="diseaseInp" name="disease">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="doctorName" class="form-label">Doctor Name</label>
+            <select class="form-select" id="doctorName" name="doctorName">
+              <option value="Doctor 1">Dr. Rakesh Lalla</option>
+              <option value="Doctor 2">Dr. Sham Mate</option>
+              <option value="Doctor 3">Dr. Prakash Varma</option>
+              <option value="Doctor 4">Dr. Hemant Rai</option>
+              <option value="Doctor 5">Dr. Ashish Mehta</option>
+              <option value="Doctor 6">Dr. Shalini Mhatre</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label for="deviceId" class="form-label">Device Id</label>
+            <select class="form-select" id="deviceId" name="deviceId">
+              <option value="device 1">Device_id12</option>
+              <option value="device 2">Device_id152</option>
+              <option value="device 3">Device_id162</option>
+              <option value="device 4">Device_id412</option>
+              <option value="device 5">Device_id512</option>
+              <option value="device 6">Device_id162</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="relativeName" class="form-label">Relative Name</label>
+            <input type="text" class="form-control" id="relativeName" name="relativeName">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="mail" class="form-label">Email id</label>
+            <input type="mail" class="form-control" id="phoneNumber" name="phoneNumber">
+          </div>
+        </div>
+
+       <div class="d-flex justify-content-center">
+          <button id="AddBtn"  type="submit" class="btn btn-md btn-primary"  style="width: 150px;">Add Patient</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    <!-- Logs -->
+   
+              <!-- Add more patient rows as needed -->
+
+              <!-- Add more patient rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </main><!-- End #main -->
+
+
+ <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Patient List</h5>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Patient Name</th>
+                <th>Patient Age</th>
+                <th>Disease</th>
+                <th>Doctor Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="patientTableBody">
+              <!-- Example patient data (replace with dynamic data) -->
+              <!-- <tr>
+                <td>John Doe</td>
+                <td>45</td>
+                <td>Fever</td>
+                <td>Dr. Rakesh Lalla</td> -->
+                <td>
+                  <a href="view_patient.html" class="btn btn-sm btn-primary">View</a>
+                  <button class="btn btn-sm btn-warning">Update</button>
+                  <button class="btn btn-sm btn-danger">Remove</button>
+                </td>
+              </tr>
+              <!-- Add more patient rows as needed -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div><!-- End Manage Patient Table -->
+
+  </main>
+
+
+
+
+
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>VitalGuard</span></strong>. All Rights Reserved
+    </div>
+
+
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+<script type="module">
+  
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+//  import {getDatabase, ref, child, get, set, update, remove} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+  import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyDDob__a9mp4pwvL7JTLCPd-IjFEyuThg8",
+    authDomain: "vitalguard-39cc9.firebaseapp.com",
+    databaseURL: "https://vitalguard-39cc9-default-rtdb.firebaseio.com",
+    projectId: "vitalguard-39cc9",
+    storageBucket: "vitalguard-39cc9.appspot.com",
+    messagingSenderId: "557696614532",
+    appId: "1:557696614532:web:e21703858e7eb2f3be82d1",
+    measurementId: "G-B9PL8K38JF"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const database = getDatabase(app);
+
+ 
+
+function AddData(event) {
+    event.preventDefault();
+
+    // Get values from the form
+    let patientName = document.getElementById('patientName').value;
+    let patientAge = document.getElementById('patientAge').value;
+    let patientBed = document.getElementById('patientBed').value;
+    let disease = document.getElementById('diseaseInp').value;
+    let doctorName = document.getElementById('doctorName').value;
+    let deviceId = document.getElementById('deviceId').value;
+    let relativeName = document.getElementById('relativeName').value;
+    let emailId = document.getElementById('phoneNumber').value;
+
+    // Create an object with the form values
+    let patientData = {
+      patientName: patientName,
+      patientAge: patientAge,
+      patientBed: patientBed,
+      disease: disease,
+      doctorName: doctorName,
+      deviceId: deviceId,
+      relativeName: relativeName,
+      emailId: emailId
+    };
+
+    // Save the data to Firebase Realtime Database
+    set(ref(database, 'PatientDetail' +  patientBed), patientData)
+      .then(() => {
+        alert("Data Added Successfully");
+      })
+      .catch((error) => {
+        alert("Unsuccessful");
+      });
+  }
+
+  // Set up the event listener for the form submission
+  document.getElementById('AddBtn').addEventListener('click', AddData);
+
+
+//-------------------adding data to table---------------//
+
+function addRowToTable(patientData) {
+      const tbody = document.getElementById('patientTableBody');
+
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td>${patientData.patientName}</td>
+        <td>${patientData.patientAge}</td>
+        <td>${patientData.disease}</td>
+        <td>${patientData.doctorName}</td>
+        <td>
+          <a href="view_patient.html" class="btn btn-sm btn-primary">View</a>
+          <button class="btn btn-sm btn-warning">Update</button>
+          <button class="btn btn-sm btn-danger">Remove</button>
+        </td>
+      `;
+
+      tbody.appendChild(newRow);
+    }
+
+    // Function to fetch data from Firebase and update the table
+    function updateTableWithData() {
+      const patientTableRef = ref(database, 'PatientDetail');
+      onValue(patientTableRef, (snapshot) => {
+        const data = snapshot.val();
+
+        // Clear existing table rows
+        const tbody = document.getElementById('patientTableBody');
+        tbody.innerHTML = '';
+
+        // Add rows for each patient in the data
+        for (const patientBed in data) {
+          const patientData = data[patientBed];
+          addRowToTable(patientData);
+        }
+      });
+    }
+
+    // Initial update when the page loads
+    updateTableWithData();
+
+    // Set up the event listener for the form submission
+    document.getElementById('AddBtn').addEventListener('click', (event) => {
+      addData(event);
+      // Update the table after adding data
+      updateTableWithData();
+    });
+
+
+</script>
+
+
+</body>
+
+</html>
